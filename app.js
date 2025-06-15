@@ -9,6 +9,7 @@ const computerScorePara = document.querySelector("#comp_score");
 const winSound =new Audio("hurey_win_audio.aac");
 const loseSound =new Audio("fail_audio.mpeg");
 const drawSound =new Audio("game_draw_audio.mpeg");
+const themeToggle = document.getElementById('theme-toggle');
 //sound effect
 
 
@@ -22,7 +23,7 @@ const drawGame = () => {
     msg.innerText = "You are game was Draw! Pls try again >_<";
     drawSound.play();
      msg.style.backgroundColor = "#f5c518";
-     G
+     
 
 };
 
@@ -83,7 +84,7 @@ choices.forEach((choice) => {
     });
 });
 
-const themeToggle = document.getElementById('theme-toggle');
+
 
 // Toggle theme on click
 themeToggle.addEventListener('click', () => {
