@@ -22,7 +22,7 @@ const drawGame = () => {
     msg.innerText = "You are game was Draw! Pls try again >_<";
     drawSound.play();
      msg.style.backgroundColor = "#f5c518";
-     G
+     
 
 };
 
