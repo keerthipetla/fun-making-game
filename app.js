@@ -50,25 +50,28 @@ const playGame = (userChoice) => {
 
     //genetating computer choice -> modularway
      const computerChoice = genComputerChoice();
+     console.log("you",userChoice,"|computer:",computerChoice);
 
        if(userChoice===computerChoice) {
         //draw
 
         drawGame();
-       } else {
+        return;
+
+       } 
         let userWin = true;
     if(userChoice ==="rock") {
         //sci,paper
-        computerChoice ==="paper"? false :true;
+       userWin= computerChoice ==="paper"? false :true;
     }   else if (userChoice==="paper") {
         //rock,sci
-        computerChoice==="scissors"?false:true;
-    } else {
+       userWin= computerChoice==="scissors"?false:true;
+    } else if(userChoice==="scissors") {
         //rock,paper
         userWin = computerChoice==="rock"?false:true;
     }
     showWinner(userWin,userChoice,computerChoice);
-     }
+     
 
 };
 
