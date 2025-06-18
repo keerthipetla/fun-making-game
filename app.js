@@ -1,6 +1,7 @@
 let userScore= 0;
 let compScore= 0;
 
+const themeToggle = document.getElementById('theme-toggle');
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
@@ -9,6 +10,7 @@ const computerScorePara = document.querySelector("#comp_score");
 const winSound =new Audio("hurey_win_audio.aac");
 const loseSound =new Audio("fail_audio.mpeg");
 const drawSound =new Audio("game_draw_audio.mpeg");
+
 //sound effect
 
 
@@ -50,7 +52,7 @@ const playGame = (userChoice) => {
 
     //genetating computer choice -> modularway
      const computerChoice = genComputerChoice();
-     console.log("you",userChoice,"|computer:",computerChoice);
+    //  console.log("you",userChoice,"|computer:",computerChoice);
 
        if(userChoice===computerChoice) {
         //draw
@@ -65,16 +67,16 @@ const playGame = (userChoice) => {
        userWin= computerChoice ==="paper"? false :true;
     }   else if (userChoice==="paper") {
         //rock,sci
-       userWin= computerChoice==="scissors"?false:true;
+       userWin= computerChoice==="scissors"? false:true;
     } else if(userChoice==="scissors") {
         //rock,paper
-        userWin = computerChoice==="rock"?false:true;
+        userWin = computerChoice==="rock"? false:true;
+
     }
     showWinner(userWin,userChoice,computerChoice);
      
 
 };
-
 
 
 
@@ -86,7 +88,7 @@ choices.forEach((choice) => {
     });
 });
 
-const themeToggle = document.getElementById('theme-toggle');
+
 
 // Toggle theme on click
 themeToggle.addEventListener('click', () => {
