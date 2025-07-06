@@ -75,7 +75,7 @@ img {
 
 /* Default (Light Mode) */
 body {
-  background-color: #ffffff;
+  background-color: #e6f9f5;
   color: #000000;
   transition: background 0.3s, color 0.3s;
 }

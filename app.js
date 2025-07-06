@@ -21,9 +21,9 @@ const genComputerChoice = () => {
 };
 const drawGame = () => {
 
-    msg.innerText = "You are game was Draw! Pls try again >_<";
+    msg.innerText = "Your game was Draw!Pls try again 🤓";
     drawSound.play();
-     msg.style.backgroundColor = "#f5c518";
+     msg.style.backgroundColor = "#c11c91";
      
 
 };
@@ -32,14 +32,15 @@ const showWinner = (userWin,userChoice,computerChoice) => {
     if (userWin) {
         userScore ++;
         userScorePara. innerText = userScore;
-        msg.innerText = `You win !  Your ${userChoice} beats ${computerChoice}`;
+        msg.innerText = `You win 🥳 Your ${userChoice} beats ${computerChoice}`;
         winSound.play();
         msg.style.backgroundColor = "green";
+        
     } else {
         compScore ++;
         computerScorePara.innerText = compScore;
 
-             msg.innerText = `You lose ${computerChoice} beats your ${userChoice} `;
+             msg.innerText = `You lose 🤧 ${computerChoice} beats your ${userChoice}! `;
              loseSound.play();
               msg.style.backgroundColor = "red";
               }
@@ -96,9 +97,8 @@ themeToggle.addEventListener('click', () => {
 
   // Change icon
   if (document.body.classList.contains('dark-mode')) {
-    themeToggle.textContent = '☀️'; // Light mode icon
+    themeToggle.textContent = '🌞'; // Light mode icon
   } else {
-    themeToggle.textContent = '🌙'; // Dark mode icon
+    themeToggle.textContent = '🌛'; // Dark mode icon
   }
 });
-
