@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    
-  
+    box-sizing: border-box;
 }
 
 h1 {
@@ -13,64 +12,65 @@ h1 {
     line-height: 5rem;
 }
 
-
-
 .choice {
-    height: 165px;
-    width: 165px;
-     border-radius:50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+    height: 20vw;           /* responsive size */
+    width: 20vw;
+    max-width: 165px;        /* keep original max */
+    max-height: 165px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .choice:hover {
     cursor: pointer;
     background-color: #081b31;
 }
 
 img {
-     height: 150px;
-    width: 150px;
+    height: 18vw;            /* responsive image */
+    width: 18vw;
+    max-width: 150px;
+    max-height: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
-
 
 .choices {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    margin-top: 5rem;
+    gap: 5vw;                /* responsive gap */
+    margin-top: 5vw;
+    flex-wrap: wrap;          /* wrap choices on small screens */
 }
 
 .score_board {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    margin-top: 3rem;
-    gap:5rem;
+    font-size: 5vw;           /* responsive font */
+    margin-top: 5vw;
+    gap:5vw;
 }
-
 
 #user_score,
 #comp_score {
-    font-size: 3rem;
+    font-size: 7vw;           /* responsive font */
 }
 
-
 .result_container {
- margin-top: 5rem;
+    margin-top: 5vw;
 }
 
 #msg {
     background-color: #081b31;
     color: #fff;
-  font-size: 2rem;
-  display: inline;
-  padding: 1rem;
-  border-radius: 1rem;
+    font-size: 5vw;           /* responsive font */
+    display: inline-block;
+    padding: 2vw 4vw;         /* responsive padding */
+    border-radius: 1rem;
 }
 
 /* Default (Light Mode) */
@@ -78,6 +78,7 @@ body {
   background-color: #e6f9f5;
   color: #000000;
   transition: background 0.3s, color 0.3s;
+  padding: 1vw;
 }
 
 /* Dark Mode */
@@ -88,10 +89,25 @@ body.dark-mode {
 
 #theme-toggle {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 2vw;
+  right: 2vw;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 5vw;           /* responsive font */
   cursor: pointer;
+}
+
+/* Extra small phones */
+@media screen and (max-width: 400px) {
+    .choices {
+        gap: 3vw;
+        margin-top: 3vw;
+    }
+    #msg {
+        font-size: 6vw;
+        padding: 3vw;
+    }
+    #theme-toggle {
+        font-size: 6vw;
+    }
 }
